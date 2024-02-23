@@ -11,8 +11,7 @@ export const useSearch = () => {
 
 export const SearchProvider = ({ children }) => {
   const [results, setResults] = useState([]);
-  const proxyUrl =
-    "https://cors-anywhere.herokuapp.com/corsdemo/https://s4.bg2.eu/services.json";
+  const proxyUrl = "https://s4.bg2.eu/services.json";
 
   const fetchData = async (value) => {
     const res = await axios.get(proxyUrl);
