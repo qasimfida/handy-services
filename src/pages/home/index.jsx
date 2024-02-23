@@ -17,6 +17,7 @@ import { SearchResultsList } from "../../components/SeacrhResultLists";
 
 const Home = () => {
   const [results, setResults] = useState([]);
+
   return (
     <div>
       <Header />
@@ -31,7 +32,9 @@ const Home = () => {
           In less than 30 seconds
         </p>
         <div className="filters mt-10  flex flex-col justify-center items-center relative ">
-          <SearchBar setResults={setResults} />
+          <SearchBar
+            setResults={setResults}
+          />
           <SearchResultsList results={results} />
         </div>
         <h1 className="text-[#5e6a76] mt-5 text-2xl uppercase font-medium font-koulen">

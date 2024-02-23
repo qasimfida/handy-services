@@ -3,20 +3,29 @@ import { SearchIcon } from "../Svgs";
 
 export const SearchBar = ({ setResults, ...rest }) => {
   const [input, setInput] = useState("");
+  const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 
   const fetchData = (value) => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
+    fetch(proxyUrl + "https://s4.bg2.eu/services.json", {})
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
       .then((json) => {
-        const results = json.filter((user) => {
+        const results = json.categories.filter((user) => {
           return (
             value &&
             user &&
-            user.name &&
-            user.name.toLowerCase().includes(value)
+            user.category &&
+            user.category.toLowerCase().includes(value)
           );
         });
         setResults(results);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
       });
   };
 
