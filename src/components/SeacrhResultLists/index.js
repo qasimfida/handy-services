@@ -1,6 +1,10 @@
 import React from "react";
 import { SearchResult } from "../SearchResult";
-export const SearchResultsList = ({ results }) => {
+import { useSearch } from "../../context/SearchContext";
+export const SearchResultsList = () => {
+  const { results } = useSearch();
+
+  console.log(results, "ss");
   const totalHeight = results.length > 0 ? "h-[330px]" : "h-0";
   return (
     <div

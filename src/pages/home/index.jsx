@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import {
   CleaningIcon,
@@ -14,10 +14,9 @@ import Tags from "../../components/Tags";
 import ServiceCard from "../../components/ServiceCard";
 import { SearchBar } from "../../components/SearchBar";
 import { SearchResultsList } from "../../components/SeacrhResultLists";
+import { SearchProvider } from "../../context/SearchContext";
 
 const Home = () => {
-  const [results, setResults] = useState([]);
-
   return (
     <div>
       <Header />
@@ -32,10 +31,10 @@ const Home = () => {
           In less than 30 seconds
         </p>
         <div className="filters mt-10  flex flex-col justify-center items-center relative ">
-          <SearchBar
-            setResults={setResults}
-          />
-          <SearchResultsList results={results} />
+          <SearchProvider>
+            <SearchBar />
+            <SearchResultsList />
+          </SearchProvider>
         </div>
         <h1 className="text-[#5e6a76] mt-5 text-2xl uppercase font-medium font-koulen">
           Popular Services
