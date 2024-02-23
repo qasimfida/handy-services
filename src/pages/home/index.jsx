@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header";
 import {
   CleaningIcon,
@@ -8,13 +8,15 @@ import {
   MobileStorageIcon,
   MoneyCreditsIcon,
   MoneyIcon,
-  SearchIcon,
   StorageIcon,
 } from "../../components/Svgs";
 import Tags from "../../components/Tags";
 import ServiceCard from "../../components/ServiceCard";
+import { SearchBar } from "../../components/SearchBar";
+import { SearchResultsList } from "../../components/SeacrhResultLists";
 
 const Home = () => {
+  const [results, setResults] = useState([]);
   return (
     <div>
       <Header />
@@ -28,15 +30,9 @@ const Home = () => {
         <p className="text-secondary mt-5 text-2xl lowercase font-[circular]">
           In less than 30 seconds
         </p>
-        <div className="filters mt-10  flex justify-center items-center ">
-          <div className="border w-550 h-50 relative ">
-            <SearchIcon class="absolute bottom-3.5 left-5 z-10" />
-            <input
-              className="font-[circular] w-full relative pl-14 pr-4 py-3.5 border border border-primary rounded-md font-medium text-[#232E41] focus:outline-none focus:border-primary "
-              type="search"
-              placeholder="What do you need help with?"
-            />
-          </div>
+        <div className="filters mt-10  flex flex-col justify-center items-center relative ">
+          <SearchBar setResults={setResults} />
+          <SearchResultsList results={results} />
         </div>
         <h1 className="text-[#5e6a76] mt-5 text-2xl uppercase font-medium font-koulen">
           Popular Services

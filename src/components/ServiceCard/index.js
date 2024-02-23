@@ -6,7 +6,7 @@ const ServiceCard = ({ icon, description }) => {
       <div className="w-[60px] h-[60px] shadow-md rounded-full flex items-center justify-center">
         {icon}
       </div>
-      <p className="mt-4 text-left text-[#232E41] font-[circular]">
+      <p className="mt-4 text-left text-[#656d7a] font-[circular]">
         {description}
       </p>
     </div>
