@@ -11,7 +11,7 @@ export const useSearch = () => {
 
 export const SearchProvider = ({ children }) => {
   const [results, setResults] = useState([]);
-  const proxyUrl = "https://s4.bg2.eu/services.json";
+  const proxyUrl = "http://165.227.152.4/services.json";
 
   const fetchData = async (value) => {
     const res = await axios.get(proxyUrl);
