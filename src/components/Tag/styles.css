@@ -1,3 +1,6 @@
+.tags_wrapper {
+  border: 0.71px solid #D8E7FB;
+}
 .tags_wrapper:active span {
   color: white;
 }

@@ -1,0 +1,42 @@
+/* styles.css */
+.search_lists {
+  filter: drop-shadow(3px 3px 0px rgba(198, 228, 224, 100%));
+  max-height: 330px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #232e41 #ccc; /* Adjust colors as needed */
+
+  /* Track */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #d8e7fb;
+    border-radius: 6px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  /* Track on hover */
+  ::-webkit-scrollbar-track:hover {
+    background-color: #ddd;
+  }
+
+  /* Handle when it's being dragged */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #666;
+  }
+
+  /* Track on drag */
+  ::-webkit-scrollbar-track:active {
+    background-color: #ccc;
+  }
+}
+.search_lists::-webkit-scrollbar-button {
+  display: none !important;
+}

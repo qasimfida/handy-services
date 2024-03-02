@@ -14,19 +14,27 @@ import Tag from "../../components/Tag";
 import ServiceCard from "../../components/ServiceCard";
 import { SearchBar } from "../../components/SearchBar";
 import { SearchResultsList } from "../../components/SeacrhResultLists";
+import PageProgressBar from "../../components/PageProgressBar";
 
 const Home = () => {
   return (
     <div>
-      <Header />
-      <div className="bg-tertiary pt-[66px] pb-10 px-4">
+      <div className="fixed top-0 left-0 z-10 w-full bg-white h-20">
+        <Header />
+      </div>
+      <div>
+        <PageProgressBar />
+      </div>
+      <div className="bg-tertiary pt-[66px] pb-10 px-4 mt-[80px]">
         <div className="flex items-center justify-center uppercase">
-          <h1 className="text-5xl font-normal font-Koulen w-729 font-koulen ">
+          <h1 className="sm:text-5xl text-[28px] font-normal font-Koulen w-729 font-koulen ">
             Book a relevant service for{" "}
-            <span className="text-5xl text-primary">your home</span>
+            <span className="sm:text-5xl text-[28px]  text-primary">
+              your home
+            </span>
           </h1>
         </div>
-        <p className="text-secondary mt-5 text-2xl lowercase font-[circular]">
+        <p className=" sm:mt-5 mt-2 sm:text-2xl text-[18px] lowercase text-secondary ">
           In less than 30 seconds
         </p>
         <div className="relative flex flex-col items-center justify-center mt-10 filters ">
@@ -48,11 +56,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="m-16 join_us">
+      <div className="my-16 px-3">
         <h1 className="text-[28px] uppercase font-koulen">
           get £300 in credits to use for 10 different services!
         </h1>
-        <p className="text-[#232E41] font-[circular]">
+        <p className="text-[#232E41]">
           Join 30,000+ Fantastic Club members and access premium benefits for
           only £89/year.
         </p>
