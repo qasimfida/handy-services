@@ -7,7 +7,7 @@ import { useSearch } from "../../context/SearchContext";
 export const SearchResultsList: React.FC = () => {
   const { results, search } = useSearch();
   const res = filterCategoriesAndServices(results, search);
-  console.log(res,"result")
+  console.log(res, "result");
   const totalHeight = res.length > 0 ? "h-[330px]" : "h-auto";
   if (!search) {
     return null;
