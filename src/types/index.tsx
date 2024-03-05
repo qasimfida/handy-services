@@ -20,7 +20,7 @@ export interface ServiceCardProps {
   description: string;
 }
 export interface SearchContextProps {
-  results: string[]; 
+  results: string[];
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   fetchData: (value: string) => void;
@@ -30,5 +30,13 @@ export interface SearchProviderProps {
 }
 export interface SearchResultsListProps {
   results: any;
-  search:any
+  search: any;
+}
+interface Service {
+  [key: string]: string;
+}
+
+export interface Category {
+  category: string;
+  services: Service[];
 }

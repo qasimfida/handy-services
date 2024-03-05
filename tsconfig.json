@@ -15,6 +15,6 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/components/SearchBar/index.tsx", "src/context/SearchContext.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/components/SearchBar/index.tsx", "src/context/SearchContext.tsx", "src/index.jsx"],
   "exclude": ["node_modules"]
 }
