@@ -1,5 +1,7 @@
-.search_lists {
+.wrapper {
   filter: drop-shadow(3px 3px 0px rgba(198, 228, 224, 100%));
+}
+.search_lists {
   overflow-y: auto;
 }
 .search_lists::-webkit-scrollbar {
@@ -9,7 +11,7 @@
   background-color: #ebf3fd;
   border-radius: 100vw;
   margin-block: 1rem;
-  padding-block: 20px;
+  position: absolute;
 }
 .search_lists::-webkit-scrollbar-thumb {
   border-radius: 1rem;
@@ -17,4 +19,5 @@
   background-clip: content-box;
   background-color: #232e41;
   cursor: pointer;
+  height: 148px;
 }
